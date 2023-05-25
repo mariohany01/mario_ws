@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/mario/mario_ws/build/gtest/cmake_install.cmake")
+  include("/home/mario/mario_ws/build/motion_pkg/cmake_install.cmake")
   include("/home/mario/mario_ws/build/msg_custom/cmake_install.cmake")
   include("/home/mario/mario_ws/build/srv_custom/cmake_install.cmake")
   include("/home/mario/mario_ws/build/talk_listen/cmake_install.cmake")
