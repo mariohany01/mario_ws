@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/install
+
+Name: talk_listen
+Description: Description of talk_listen
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
