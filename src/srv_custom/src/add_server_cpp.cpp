@@ -14,10 +14,12 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "add_two_ints_server");
   ros::NodeHandle n;
-
+  //hena ana ba3mel el services w bakhaleha tedene el call back fu ele esmaha add
   ros::ServiceServer service = n.advertiseService("add_two_ints", add);
+  //ROS_INFO di zai printf keda bas lel ros 3ashan tekhetb 3ala el terminal
   ROS_INFO("Ready to add two ints.");
   ros::spin();
 
   return 0;
 }
+
