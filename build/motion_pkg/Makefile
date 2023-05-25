@@ -407,32 +407,32 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-src/straight_line_cpp.o: src/straight_line_cpp.cpp.o
+src/goal_to_goal_cpp.o: src/goal_to_goal_cpp.cpp.o
 
-.PHONY : src/straight_line_cpp.o
+.PHONY : src/goal_to_goal_cpp.o
 
 # target to build an object file
-src/straight_line_cpp.cpp.o:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o
-.PHONY : src/straight_line_cpp.cpp.o
+src/goal_to_goal_cpp.cpp.o:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o
+.PHONY : src/goal_to_goal_cpp.cpp.o
 
-src/straight_line_cpp.i: src/straight_line_cpp.cpp.i
+src/goal_to_goal_cpp.i: src/goal_to_goal_cpp.cpp.i
 
-.PHONY : src/straight_line_cpp.i
+.PHONY : src/goal_to_goal_cpp.i
 
 # target to preprocess a source file
-src/straight_line_cpp.cpp.i:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.i
-.PHONY : src/straight_line_cpp.cpp.i
+src/goal_to_goal_cpp.cpp.i:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.i
+.PHONY : src/goal_to_goal_cpp.cpp.i
 
-src/straight_line_cpp.s: src/straight_line_cpp.cpp.s
+src/goal_to_goal_cpp.s: src/goal_to_goal_cpp.cpp.s
 
-.PHONY : src/straight_line_cpp.s
+.PHONY : src/goal_to_goal_cpp.s
 
 # target to generate assembly for a file
-src/straight_line_cpp.cpp.s:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.s
-.PHONY : src/straight_line_cpp.cpp.s
+src/goal_to_goal_cpp.cpp.s:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.s
+.PHONY : src/goal_to_goal_cpp.cpp.s
 
 # Help Target
 help:
@@ -463,9 +463,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... src/straight_line_cpp.o"
-	@echo "... src/straight_line_cpp.i"
-	@echo "... src/straight_line_cpp.s"
+	@echo "... src/goal_to_goal_cpp.o"
+	@echo "... src/goal_to_goal_cpp.i"
+	@echo "... src/goal_to_goal_cpp.s"
 .PHONY : help
 
 

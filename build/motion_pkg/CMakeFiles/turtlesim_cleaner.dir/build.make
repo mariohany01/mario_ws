@@ -57,27 +57,27 @@ include motion_pkg/CMakeFiles/turtlesim_cleaner.dir/progress.make
 # Include the compile flags for this target's objects.
 include motion_pkg/CMakeFiles/turtlesim_cleaner.dir/flags.make
 
-motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/flags.make
-motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o: /home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mario/mario_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o"
-	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o -c /home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/flags.make
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o: /home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mario/mario_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o"
+	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o -c /home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp
 
-motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.i"
-	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp > CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.i
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.i"
+	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp > CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.i
 
-motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.s"
-	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp -o CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.s
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.s"
+	cd /home/mario/mario_ws/build/motion_pkg && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp -o CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.s
 
 # Object files for target turtlesim_cleaner
 turtlesim_cleaner_OBJECTS = \
-"CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o"
+"CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o"
 
 # External object files for target turtlesim_cleaner
 turtlesim_cleaner_EXTERNAL_OBJECTS =
 
-/home/mario/mario_ws/devel/lib/motion_pkg/turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o
+/home/mario/mario_ws/devel/lib/motion_pkg/turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o
 /home/mario/mario_ws/devel/lib/motion_pkg/turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make
 /home/mario/mario_ws/devel/lib/motion_pkg/turtlesim_cleaner: /opt/ros/noetic/lib/libroscpp.so
 /home/mario/mario_ws/devel/lib/motion_pkg/turtlesim_cleaner: /usr/lib/x86_64-linux-gnu/libpthread.so

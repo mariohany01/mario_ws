@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp" "/home/mario/mario_ws/build/motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o"
+  "/home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp" "/home/mario/mario_ws/build/motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/goal_to_goal_cpp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

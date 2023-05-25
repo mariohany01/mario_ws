@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mario/mario_ws/src/motion_pkg/src/straight_line_cpp.cpp
+/home/mario/mario_ws/src/motion_pkg/src/goal_to_goal_cpp.cpp
 ros/ros.h
 /home/mario/mario_ws/src/motion_pkg/src/ros/ros.h
 geometry_msgs/Twist.h
