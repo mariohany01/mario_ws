@@ -177,6 +177,24 @@ def spiralClean(velocity_publisher,rk,wk):
     velocity_publisher.publish(vel_msg)
 
 
+def letter_M(publisher):
+ 
+
+    setDesiredOrientation(velocity_publisher,20,135)
+    move(velocity_publisher,2.0, 4.0, True)
+    setDesiredOrientation(velocity_publisher,20,270)
+    move(velocity_publisher,2.0, 5.0, True)
+    move(velocity_publisher,2.0, 5.0, False)
+    setDesiredOrientation(velocity_publisher,20,315)
+    move(velocity_publisher,2.0, 4.0, True)
+    setDesiredOrientation(velocity_publisher,20,45)
+    move(velocity_publisher,2.0, 4.0, True)
+    setDesiredOrientation(velocity_publisher,20,270)
+    move(velocity_publisher,2.0, 5.0, True)
+
+
+
+    pass
 
 #Main function
 if __name__ == '__main__':
@@ -209,7 +227,9 @@ if __name__ == '__main__':
         #setDesiredOrientation(velocity_publisher,45,45)
 
     #def spiralClean(line_x,angular_z):
-        spiralClean(velocity_publisher,0,2)
+        #spiralClean(velocity_publisher,0,2)
+
+        letter_M(velocity_publisher)
 
 
     except rospy.ROSInterruptException:

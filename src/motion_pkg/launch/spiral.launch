@@ -1,0 +1,4 @@
+<launch>
+    <node name="solhefa"            pkg="turtlesim"     type="turtlesim_node"/>
+    <node name="The_Motion"     pkg="motion_pkg"    type="types_of_motion.py"/>
+</launch>
