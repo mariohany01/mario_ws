@@ -243,6 +243,21 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule:
+	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+.PHONY : motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+
+# Convenience name for target.
+turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+
+.PHONY : turtlesim_cleaner
+
+# fast build rule for target.
+turtlesim_cleaner/fast:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build
+.PHONY : turtlesim_cleaner/fast
+
+# Convenience name for target.
 motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
 	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
@@ -392,6 +407,33 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/straight_line_cpp.o: src/straight_line_cpp.cpp.o
+
+.PHONY : src/straight_line_cpp.o
+
+# target to build an object file
+src/straight_line_cpp.cpp.o:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.o
+.PHONY : src/straight_line_cpp.cpp.o
+
+src/straight_line_cpp.i: src/straight_line_cpp.cpp.i
+
+.PHONY : src/straight_line_cpp.i
+
+# target to preprocess a source file
+src/straight_line_cpp.cpp.i:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.i
+.PHONY : src/straight_line_cpp.cpp.i
+
+src/straight_line_cpp.s: src/straight_line_cpp.cpp.s
+
+.PHONY : src/straight_line_cpp.s
+
+# target to generate assembly for a file
+src/straight_line_cpp.cpp.s:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/src/straight_line_cpp.cpp.s
+.PHONY : src/straight_line_cpp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -408,6 +450,7 @@ help:
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... list_install_components"
+	@echo "... turtlesim_cleaner"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... install"
@@ -420,6 +463,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/straight_line_cpp.o"
+	@echo "... src/straight_line_cpp.i"
+	@echo "... src/straight_line_cpp.s"
 .PHONY : help
 
 

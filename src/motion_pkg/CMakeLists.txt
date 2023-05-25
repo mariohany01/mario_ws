@@ -204,3 +204,9 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
+#talker
+add_executable(turtlesim_cleaner src/goal_to_goal_cpp.cpp)
+target_link_libraries (turtlesim_cleaner ${catkin_LIBRARIES})
+#add_dependencies(talker gaitech_doc_generate_message_cpp)
