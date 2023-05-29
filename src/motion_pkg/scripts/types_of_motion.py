@@ -49,13 +49,13 @@ def move(velocity_publisher, speed, distance, is_forward):
         distance_moved = 0.0
 
         # Create a rate object to publish the velocity at 10 Hz
-        loop_rate = rospy.Rate(10)
+        loop_rate = rospy.Rate(600)
 
         # While the turtlebot has not reached the desired distance, publish the velocity and sleep for 1/10th of a second
         while True:
                 rospy.loginfo("Turtlesim moves forwards")
                 velocity_publisher.publish(velocity_message)
-                #rospy.loginfo(x)
+                rospy.loginfo(x)
                 #rospy.loginfo(y)
                 #rospy.loginfo(x0)
                 #rospy.loginfo(y0)
@@ -179,22 +179,20 @@ def spiralClean(velocity_publisher,rk,wk):
 
 def letter_M(publisher):
  
-
-    setDesiredOrientation(velocity_publisher,20,135)
-    move(velocity_publisher,2.0, 4.0, True)
-    setDesiredOrientation(velocity_publisher,20,270)
-    move(velocity_publisher,2.0, 5.0, True)
-    move(velocity_publisher,2.0, 5.0, False)
-    setDesiredOrientation(velocity_publisher,20,315)
-    move(velocity_publisher,2.0, 4.0, True)
-    setDesiredOrientation(velocity_publisher,20,45)
-    move(velocity_publisher,2.0, 4.0, True)
-    setDesiredOrientation(velocity_publisher,20,270)
-    move(velocity_publisher,2.0, 5.0, True)
-
-
-
-    pass
+    setDesiredOrientation(velocity_publisher,10,135)
+    move(velocity_publisher,5.0, 2, True)
+    setDesiredOrientation(velocity_publisher,10,269)
+    move(velocity_publisher,5.0, 4 , True)
+    move(velocity_publisher,5.0, 4 , False)
+    setDesiredOrientation(velocity_publisher,10,135)
+    move(velocity_publisher,5.0, 2, False)
+    setDesiredOrientation(velocity_publisher,10,45)
+    move(velocity_publisher,5.0, 2, True)
+    setDesiredOrientation(velocity_publisher,10,269)
+    move(velocity_publisher,5.0, 4 , True)
+    
+    
+pass
 
 #Main function
 if __name__ == '__main__':
@@ -215,7 +213,7 @@ if __name__ == '__main__':
         time.sleep(2)
 
     #move(speed, distance, is_forward):
-        #move(velocity_publisher, 1.0, 4.0, True)
+    #    move(velocity_publisher, 5.0, 4.0, False)
     
     #rotate (angular_speed_degree, relative_angle_degree, clockwise):   #elfar2 ene di incremental
         #rotate(velocity_publisher, 90, 90, False)

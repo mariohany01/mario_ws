@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/mario/mario_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -67,6 +79,29 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -90,17 +125,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -110,30 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,36 +166,6 @@ preinstall/fast:
 depend:
 	cd /home/mario/mario_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make motion_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make motion_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 motion_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -243,36 +213,6 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
-.PHONY : motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
-
-# Convenience name for target.
-turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
-
-.PHONY : turtlesim_cleaner
-
-# fast build rule for target.
-turtlesim_cleaner/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build
-.PHONY : turtlesim_cleaner/fast
-
-# Convenience name for target.
-motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make motion_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 motion_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : motion_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -286,21 +226,6 @@ roscpp_generate_messages_py: motion_pkg/CMakeFiles/roscpp_generate_messages_py.d
 roscpp_generate_messages_py/fast:
 	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build.make motion_pkg/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make motion_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 motion_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
@@ -331,21 +256,6 @@ rosgraph_msgs_generate_messages_cpp: motion_pkg/CMakeFiles/rosgraph_msgs_generat
 rosgraph_msgs_generate_messages_cpp/fast:
 	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make motion_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -407,6 +317,21 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make motion_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+# Convenience name for target.
+motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule:
+	cd /home/mario/mario_ws/build && $(MAKE) -f CMakeFiles/Makefile2 motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+.PHONY : motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+
+# Convenience name for target.
+turtlesim_cleaner: motion_pkg/CMakeFiles/turtlesim_cleaner.dir/rule
+
+.PHONY : turtlesim_cleaner
+
+# fast build rule for target.
+turtlesim_cleaner/fast:
+	cd /home/mario/mario_ws/build && $(MAKE) -f motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build.make motion_pkg/CMakeFiles/turtlesim_cleaner.dir/build
+.PHONY : turtlesim_cleaner/fast
+
 src/goal_to_goal_cpp.o: src/goal_to_goal_cpp.cpp.o
 
 .PHONY : src/goal_to_goal_cpp.o
@@ -440,29 +365,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... list_install_components"
-	@echo "... turtlesim_cleaner"
-	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... install/strip"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... list_install_components"
+	@echo "... turtlesim_cleaner"
 	@echo "... src/goal_to_goal_cpp.o"
 	@echo "... src/goal_to_goal_cpp.i"
 	@echo "... src/goal_to_goal_cpp.s"
