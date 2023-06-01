@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/devel
+
+Name: ultrasonic
+Description: Description of ultrasonic
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/install
+
+Name: car_srv
+Description: Description of car_srv
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lros_essentials_cpp
+Requires: roscpp rospy std_msgs message_runtime

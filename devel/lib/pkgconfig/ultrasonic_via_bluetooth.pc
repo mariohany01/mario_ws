@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/devel
+
+Name: ultrasonic_via_bluetooth
+Description: Description of ultrasonic_via_bluetooth
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
