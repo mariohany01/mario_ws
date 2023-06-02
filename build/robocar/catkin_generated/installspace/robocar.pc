@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/install
+
+Name: robocar
+Description: Description of robocar
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
