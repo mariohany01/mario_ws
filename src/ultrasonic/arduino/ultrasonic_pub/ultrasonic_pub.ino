@@ -9,7 +9,7 @@
 const int echoPin = 5;  //Echo pin
 const int trigPin = 6;  //Trigger pin
 
-const int maxRange = 300.0;   //Maximum range in centimeters
+const int maxRange = 200.0;   //Maximum range in centimeters
 const int minRange = 0.0;     //Minimum range
 
 unsigned long range_timer;    //Used to measure 50 ms interval
