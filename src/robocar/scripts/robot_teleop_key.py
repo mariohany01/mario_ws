@@ -6,7 +6,11 @@ from geometry_msgs.msg import Twist
 import sys, select, termios, tty
 
 msg = """
-Control Your Turtlebot!
+Control #####      @@@    #####
+        #    #    @   @   #    #
+        #####    @     @  #####
+        #    #    @   @   #    #
+        #####      @@@    #####
 ---------------------------
 Moving around:
    u    i    o
@@ -16,7 +20,7 @@ Moving around:
 q/z : increase/decrease max speeds by 10%
 w/x : increase/decrease only linear speed by 10%
 e/c : increase/decrease only angular speed by 10%
-space key, k : force stop
+space key, k : force stop aw ehbed 3al keyboard 3ashan yo2af
 anything else : stop smoothly
 
 CTRL-C to quit

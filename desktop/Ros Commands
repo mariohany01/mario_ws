@@ -1,0 +1,71 @@
+****************************
+*   ROS MASTER NODE INIT   *
+****************************
+
+source devel/setup.bash		/hotto abl kol haga daynmannnnn w yetfeteh men goua file el workspace
+		
+roscore				/open the master node
+
+****************************
+*We need to start the nodes*
+****************************
+
+rosrun turtlesim turtlesim_node 	/open 1 node that has 3 topics 
+					/1)cmd_vel		- works as subscriber
+					/2)color_sensor	- works as publisher
+					/3)pose		- works as publisher
+rosrun turtlesim turtle_teleop_key	/open 1 node that has 1 topic that opened before 
+					/cmd_vel  		- works as publisher
+					
+rosnode list				/to see all nodes
+rostopic list				/to see all topics
+
+rqt_graph				/to see graph yebayen kol haga harfeyan
+rqt_plot				/bybaney kol haga ka plot maa el time
+
+***************
+*Info lel node*
+***************
+
+rosnode info /turtlesim		/bahot el node name w bygebly heya 3andaha eh publisher w eh subscriber w eh el msgs w eh no3 el msgs
+					/el esm da hagebo men ros node list
+
+****************
+*Info lel topic*
+****************
+
+rostopic info /turtle1/cmd_vel	/bahot el topic name w bygebly heya publisher maa anhy node w subscriber maa anhy node
+					/haga mohema kaman betgele heya esm el msg ele el topic da byb3atha (ex hena $geometry_msgs/Twist)
+rostopic echo /turtle1/cmd_vel	/da hena bygebly zai report lahza be lahza le kol haga betehsal fel topic da			
+
+***************
+*Info lel Msgs*
+***************
+
+rosmsg show geometry_msgs/Twist	/($rostopic info/topic_name ) e3raf el type bet3 el msg bta3 el topic ele enta 3ayez tshofo w menoo te2dar
+					/tegeeeb el info kolaha bta3et el msg di - da hena fatahly el txt file beta3 el msg di
+
+
+**************************
+*Publish a msg on a topic*
+**************************
+
+
+
+***************
+*.bashrc files*
+***************
+
+rostopic pub -r 10 /turtle1/cmd_vel geometry_msgs/Twist '{linear : {x:0.1,y:0.0,z:0.0},angular : {x:0.0,y:0.0,z:0.0}}'
+					/this command by3mel publish le ene el robot yemshy f etegah x b velocity 0.1 lemodet 10 seconds
+
+
+#source /home/mario/catkin_ws/devel/setup.bash
+#source /home/mario/mario_ws/devel/setup.bash
+
+
+
+
+
+
+					

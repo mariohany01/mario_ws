@@ -1,0 +1,48 @@
+rosrun rosserial_python serial_node.py /dev/ttyACM0 57600
+
+Too run rosserial Node
+
+
+
+sudo rfcomm connect 0 00:22:04:00:25:74 1
+
+rosrun rosserial_python serial_node.py /dev/rfcomm0 57600
+
+115200
+
+
+
+***************************
+sudo apt install picocom
+
+rosrun rosserial_python serial_node.py _port:=/dev/rfcomm0 _baud:=115200
+
+
+[ERROR] [1685640660.943549]: Unable to sync with device; possible link problem or link software version mismatch such as hydro rosserial_python with groovy Arduino
+
+
+
+*****************************
+sudo rfcomm connect 0 00:22:04:00:25:74 1
+/00:22:04:00:25:74
+
+	rosrun rosserial_python serial_node.py _port:=/dev/rfcomm0 _baud:=9600
+
+9600
+38400
+115200
+
+
+
+[WARN] [1685821336.898098]: Last read step: data
+[WARN] [1685821336.901685]: Run loop error: Serial Port read failure: Returned short (expected 44 bytes, received 38 instead).
+s
+
+[INFO] [1685821638.858562]: Packet Failed :  Failed to read msg data
+[INFO] [1685821638.862883]: expected msg length is 44
+[WARN] [1685821638.867047]: Last read step: data
+[WARN] [1685821638.870722]: Run loop error: Serial Port read failure: Returned short (expected 44 bytes, received 21 instead).
+[INFO] [1685821638.874214]: Requesting topics...
++++++++
+
+
