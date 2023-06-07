@@ -2,7 +2,6 @@
 import rospy
 from sensor_msgs.msg import Range
 
-
 def ultrasonic_callback(msg):
      print("Range:", msg.range)
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20230606-0752-Experimental"
+	Name="Mario"
+	Generator="ctest-3.16.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="9.4.0"
+	OSName="Linux"
+	Hostname="Mario"
+	OSRelease="5.15.0-73-generic"
+	OSVersion="#80~20.04.1-Ubuntu SMP Wed May 17 14:58:14 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="6144"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="3522"
+	TotalPhysicalMemory="7828"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1526.46"
+	>
+	<Testing>
+		<StartDateTime>Jun 06 10:52 EEST</StartDateTime>
+		<StartTestTime>1686037960</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jun 06 10:52 EEST</EndDateTime>
+		<EndTestTime>1686037960</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

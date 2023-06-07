@@ -3,7 +3,7 @@
 import rospy
 from std_msgs.msg import Float32, Int32, Bool
 from geometry_msgs.msg import Twist 
-
+    
 #Mapping -1 - 1 to -255 to 255
 from numpy import interp
 #############################################################
@@ -17,6 +17,8 @@ class TwistToMotors():
     #############################################################
         rospy.init_node("twist_to_motors")
         nodename = rospy.get_name()
+        
+        # Log a message to the console indicating that the node has started.
         rospy.loginfo("%s started" % nodename)
 
         rospy.on_shutdown(self.shutdown_cb)
