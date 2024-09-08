@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/devel
+
+Name: msg_custom
+Description: Description of msg_custom
+Version: 0.0.0
+Cflags: -I/home/mario/mario_ws/devel/include -I/home/mario/mario_ws/src/msg_custom/include
+Libs: -L${prefix}/lib -lmsg_custom
+Requires: roscpp rospy std_msgs message_runtime

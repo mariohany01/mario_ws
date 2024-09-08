@@ -1,0 +1,4 @@
+<launch>
+	<node name="turtlesim" 	    pkg="turtlesim" 	type="turtlesim_node"/>
+	<node name="GoToGoal" 		pkg="motion_types" 	type="go_to_goal"/>
+</launch>

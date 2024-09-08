@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/devel
+
+Name: motion_types
+Description: Description of motion_types
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

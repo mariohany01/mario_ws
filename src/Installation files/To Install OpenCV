@@ -1,0 +1,46 @@
+To install Open CV
+
+
+sudo apt update							#Update system
+sudo apt install ros-noetic-vision-opencv				#Install Open CV bridge On ROS
+sudo apt install python3-opencv libopencv-dev python3-numpy		#Install OpenCV dependencies
+sudo apt-get install ros-noetic-usb-cam				#provides drivers for USB webcams.
+sudo apt-get install ros-noetic-image-view   				#view Image From USB
+
+pip install opencv-contrib-python					#ma3andesh ay fekra eh da bas anis kouba hatto
+			
+
+
+
+
+********************************************************
+EDIT IN CMAKE
+
+find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
+  roscpp
+  rospy
+  sensor_msgs
+  image_transport
+)
+
+find_package(OpenCV REQUIRED)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+)
+
+target_link_libraries(${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+********************************************************
+EDIT IN XML
+
+<build_depend>cv_bridge</build_depend>
+<exec_depend>cv_bridge</exec_depend>
+<build_depend>image_transport</build_depend>
+<exec_depend>image_transport</exec_depend>
+<build_depend>opencv</build_depend>
+<exec_depend>opencv</exec_depend>

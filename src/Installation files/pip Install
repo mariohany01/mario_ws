@@ -1,0 +1,6 @@
+Install Pip in ubuntu 20.04
+
+sudo apt update
+sudo apt install python3-pip
+pip3 --version
+

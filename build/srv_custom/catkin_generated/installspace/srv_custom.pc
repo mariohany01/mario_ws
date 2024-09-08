@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/install
+
+Name: srv_custom
+Description: Description of srv_custom
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmsg_custom
+Requires: roscpp rospy std_msgs message_runtime

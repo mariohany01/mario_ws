@@ -1,0 +1,8 @@
+prefix=/home/mario/mario_ws/devel
+
+Name: preception
+Description: Description of preception
+Version: 0.0.0
+Cflags: -I/home/mario/mario_ws/src/preception/include
+Libs: -L${prefix}/lib -lpreception
+Requires: cv_bridge image_transport roscpp rospy sensor_msgs std_msgs
